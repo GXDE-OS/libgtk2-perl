@@ -1,0 +1,75 @@
+{
+   "abstract" : "Perl interface to the 2.x series of the Gimp Toolkit library",
+   "author" : [
+      "unknown",
+      "gtk2-perl Team <gtk-perl-list at gnome dot org>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "ExtUtils::MakeMaker version 7.18, CPAN::Meta::Converter version 2.150005",
+   "license" : [
+      "unknown",
+      "lgpl_2_1"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Gtk2",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "inc",
+         "tools",
+         "xs"
+      ],
+      "file" : [
+         "Makefile.PL",
+         "gtk-demo/main.pl"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Cairo" : "1.000",
+            "ExtUtils::Depends" : "0.300",
+            "ExtUtils::MakeMaker" : "0",
+            "ExtUtils::PkgConfig" : "1.030",
+            "Glib" : "1.280",
+            "Pango" : "1.220"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Cairo" : "1.000",
+            "ExtUtils::Depends" : "0.300",
+            "ExtUtils::PkgConfig" : "1.030",
+            "Glib" : "1.280",
+            "Pango" : "1.220"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "mailto" : "bug-Gtk2 [at] rt.cpan.org",
+         "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Gtk2"
+      },
+      "homepage" : "http://gtk2-perl.sourceforge.net",
+      "license" : [
+         "http://www.gnu.org/licenses/lgpl-2.1.html"
+      ],
+      "repository" : {
+         "type" : "git",
+         "url" : "git://git.gnome.org/perl-Gtk2",
+         "web" : "http://git.gnome.org/browse/perl-Gtk2"
+      },
+      "x_MailingList" : "https://mail.gnome.org/mailman/listinfo/gtk-perl-list"
+   },
+   "version" : "1.2499",
+   "x_serialization_backend" : "JSON::PP version 2.27300"
+}

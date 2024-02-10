@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+
+# Ideally this should go to some override_dh_auto_*.
+export LC_ALL=C.UTF-8
+export LANGUAGE=C
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+ARCHLIB := $(shell perl -MConfig -e 'print $$Config{vendorarch}')
+INDEPLIB := $(shell perl -MConfig -e 'print $$Config{vendorlib}')
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_configure:
+	dh_auto_configure -- NOECHO=
+
+override_dh_auto_install:
+	sed -e 's,$${archlib},$(ARCHLIB),g' debian/libgtk2-perl.install.in > debian/libgtk2-perl.install
+	sed -e 's,$${archlib},$(ARCHLIB),g' -e 's,$${indeplib},$(INDEPLIB),g' debian/libgtk2-perl-doc.install.in > debian/libgtk2-perl-doc.install
+	dh_auto_install
+
+override_dh_auto_test:
+	xvfb-run -a dh_auto_test
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS

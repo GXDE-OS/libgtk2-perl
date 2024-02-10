@@ -1,0 +1,24 @@
+From: intrigeri <intrigeri@boum.org>
+Date: Mon, 27 Jun 2016 12:48:50 +0000
+Subject: Add debug output in test that failed on powerpc (t/GdkPixbuf.t).
+
+---
+ t/GdkPixbuf.t | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/t/GdkPixbuf.t b/t/GdkPixbuf.t
+index ebb6645..7a4ea61 100644
+--- a/t/GdkPixbuf.t
++++ b/t/GdkPixbuf.t
+@@ -197,8 +197,9 @@ $vbox->add (Gtk2::Image->new_from_pixbuf ($pixbuf)) if $show;
+ # exceptions.
+ #
+ my $filename = "$dir/testsave1.jpg";
+-$pixbuf->save ($filename, 'jpeg', quality => 75.0);
+-ok (1);
++eval { $pixbuf->save ($filename, 'jpeg', quality => 75.0); };
++warn $@ if $@;
++is ($@, '');
+ 
+ $pixbuf = Gtk2::Gdk::Pixbuf->new_from_file ($filename);
+ isa_ok ($pixbuf, 'Gtk2::Gdk::Pixbuf', 'new_from_file');

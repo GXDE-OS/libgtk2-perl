@@ -1,0 +1,4 @@
+30-disable_libgtk_version_check.patch
+fix-typo.patch
+Add-debug-output-in-test-that-failed-on-powerpc-t-GdkPixb.patch
+Fix-typos-in-POD.patch

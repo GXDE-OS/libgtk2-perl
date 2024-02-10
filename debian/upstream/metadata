@@ -1,0 +1,9 @@
+---
+Archive: CPAN
+Bug-Database: https://rt.cpan.org/Public/Dist/Display.html?Name=Gtk2
+Bug-Submit: bug-Gtk2@rt.cpan.org
+Contact: gtk2-perl Team <gtk-perl-list@gnome.org>
+Homepage: http://gtk2-perl.sourceforge.net
+Name: Gtk2
+Repository: git://git.gnome.org/perl-Gtk2
+Repository-Browse: http://git.gnome.org/browse/perl-Gtk2

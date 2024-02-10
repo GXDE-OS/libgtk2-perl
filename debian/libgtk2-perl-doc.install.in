@@ -1,0 +1,9 @@
+${archlib}/Gtk2/*.pod             ${indeplib}/Gtk2/
+${archlib}/Gtk2/Buildable/*.pod   ${indeplib}/Gtk2/Buildable/
+${archlib}/Gtk2/Gdk/*.pod         ${indeplib}/Gtk2/Gdk/
+${archlib}/Gtk2/Gdk/Cairo/*.pod   ${indeplib}/Gtk2/Gdk/Cairo/
+${archlib}/Gtk2/Gdk/Event/*.pod   ${indeplib}/Gtk2/Gdk/Event/
+${archlib}/Gtk2/Gdk/Pango/*.pod   ${indeplib}/Gtk2/Gdk/Pango/
+${archlib}/Gtk2/Pango/*.pod       ${indeplib}/Gtk2/Pango/
+${archlib}/Gtk2/Pango/Cairo/*.pod ${indeplib}/Gtk2/Pango/Cairo/
+usr/share/man/*

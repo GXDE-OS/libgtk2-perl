@@ -1,0 +1,5 @@
+${archlib}/auto/Gtk2/*
+${archlib}/Gtk2/Install/*
+${archlib}/Gtk2/*.pm
+${archlib}/Gtk2.pm
+${archlib}/Gtk2/Gdk/Keysyms.pm
