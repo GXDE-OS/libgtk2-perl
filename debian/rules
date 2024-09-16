@@ -20,8 +20,5 @@ override_dh_auto_install:
 	sed -e 's,$${archlib},$(ARCHLIB),g' -e 's,$${indeplib},$(INDEPLIB),g' debian/libgtk2-perl-doc.install.in > debian/libgtk2-perl-doc.install
 	dh_auto_install
 
-override_dh_auto_test:
-	xvfb-run -a dh_auto_test
-
 override_dh_installchangelogs:
 	dh_installchangelogs NEWS
